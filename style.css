@@ -1,7 +1,13 @@
+* {
+
+scroll-behavior: smooth;
+}
+
 body {
     font-family: sans-serif;
     line-height: 1.5em;
     font-size: 1.1em;
+
 }
 
 code {
@@ -19,35 +25,41 @@ section {
 
 h2 {
   font-size: 2em;
-  margin: .8em 0 .4em;
+  margin: .8em 0;
   font-weight: 500;
   line-height: 2em;
 }
 
 nav{
-    height: 3em;
+    height: 5em;
     padding: 0 30px;
     color: snow;
 }
 
 nav ul {
+    height: 100%;
     display: flex;
+    align-items: center;
     justify-content: space-around;
 }
 
 /* Specific classes */
 
+section#hero {
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
 
-.header .logo img {
+#hero .logo img {
     max-height: 100px;
     vertical-align: top;
 }
 
-.header .logo {
+#hero .logo {
     /* margin-top: 50px; */
 }
 
-.header .logo h1 {
+#hero .logo h1 {
     display: inline;
     font-size: 4em;
     line-height: 110px;
@@ -56,7 +68,7 @@ nav ul {
 }
 
 
-.header h2 {
+#hero h2 {
     z-index: 1;
     margin: 0 auto;
     margin-bottom: 10px;
@@ -67,16 +79,16 @@ nav ul {
     max-width: 760px;
 }
 
-.header img.demo {
-    width: 80%;
+#hero img.demo {
+    width: 70%;
     margin-top: 40px;
 }
 
-.header .teaser {
+#hero .teaser {
     margin-top: 40px;
 }
 
-.header p {
+#hero p {
     margin: 0 auto;
     max-width: 760px;
     font-weight: 300;
@@ -91,25 +103,61 @@ nav ul {
 
 .flex-3 div {
     width: 30%;
+    margin: 20px 0;
 }
 
-.features img {
+#features>p {
+    margin: 20px 0;
+}
+
+#features img {
+    width: 50%;
+    aspect-ratio: 1 / 1;
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
     border-radius: 100%;
     object-fit: cover;
-    width: 80%;
-    aspect-ratio: 1 / 1;
 }
 
+#videos img{
+    width: 90%;
+    aspect-ratio: 16/9;
+    object-fit: contain;
+}
+
+
 /* Colors  */
+
+nav {
+    background-color: #21283e;
+}
+
+a{
+    color: snow;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a.external {
+
+    text-decoration: underline;
+}
+
+a.external::before {
+  content: '🔗';
+}
 
 body {
     background-color: snow;
 }
 
-section.features {
-    background-color: #b7abff;
+section#features {
+    color: snow;
+    background-color: #21283e;
 }
 
-nav {
-    background-color: darkslateblue;
+section#docs {
+    background-color: #dde2ff;
 }
