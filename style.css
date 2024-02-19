@@ -1,0 +1,115 @@
+body {
+    font-family: sans-serif;
+    line-height: 1.5em;
+    font-size: 1.1em;
+}
+
+code {
+    font-family: monospace;
+}
+
+img {
+    max-width: 100%;
+}
+
+section {
+    text-align: center;
+    padding: 30px 40px;
+}
+
+h2 {
+  font-size: 2em;
+  margin: .8em 0 .4em;
+  font-weight: 500;
+  line-height: 2em;
+}
+
+nav{
+    height: 3em;
+    padding: 0 30px;
+    color: snow;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Specific classes */
+
+
+.header .logo img {
+    max-height: 100px;
+    vertical-align: top;
+}
+
+.header .logo {
+    /* margin-top: 50px; */
+}
+
+.header .logo h1 {
+    display: inline;
+    font-size: 4em;
+    line-height: 110px;
+    margin: 0 10px;
+    font-weight: 600;
+}
+
+
+.header h2 {
+    z-index: 1;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    font-size: 2.2em;
+    line-height: 1.3em;
+    margin-top: 20px;
+    font-weight: 300;
+    max-width: 760px;
+}
+
+.header img.demo {
+    width: 80%;
+    margin-top: 40px;
+}
+
+.header .teaser {
+    margin-top: 40px;
+}
+
+.header p {
+    margin: 0 auto;
+    max-width: 760px;
+    font-weight: 300;
+    font-size: 1.2em;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.flex-3 div {
+    width: 30%;
+}
+
+.features img {
+    border-radius: 100%;
+    object-fit: cover;
+    width: 80%;
+    aspect-ratio: 1 / 1;
+}
+
+/* Colors  */
+
+body {
+    background-color: snow;
+}
+
+section.features {
+    background-color: #b7abff;
+}
+
+nav {
+    background-color: darkslateblue;
+}
