@@ -1,5 +1,7 @@
 :root {
     --max-width: 1000px;
+    --max-text-width: 700px;
+    --min-section-padding: 50px;
 }
 
 * {
@@ -13,6 +15,7 @@ body {
 
 }
 
+
 code {
     font-family: monospace;
 }
@@ -22,17 +25,28 @@ img {
 }
 
 section, nav>ul {
-    padding: 0 calc(max(30px, (100% - var(--max-width))/2));
+    padding: 0 calc(max(var(--min-section-padding), (100% - var(--max-width))/2));
+}
+
+section div.text {
+    padding: 0 calc(max(var(--min-section-padding), (100% - var(--max-text-width))/2));
 }
 
 section {
     text-align: center;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
     padding-top: 30px;
 }
 
 h2 {
     font-size: 2em;
+    margin: .8em 0;
+    font-weight: 500;
+    line-height: 2em;
+}
+
+h3 {
+    font-size: 1.7em;
     margin: .8em 0;
     font-weight: 500;
     line-height: 2em;
@@ -73,6 +87,46 @@ a.button:hover {
     background-color: #0056b3;
 }
 
+/* Lists */
+
+section#docs ul {
+    list-style-type: disc;
+}
+
+section#docs ol {
+    list-style-type: decimal;
+}
+
+section#docs ul, section#docs ol{
+    margin-bottom: 16px;
+    padding-left: 20px;
+}
+
+section#docs li {
+    margin-bottom: 4px;
+}
+
+section#docs li a {
+    text-decoration: none;
+    color: #0366d6;
+}
+
+section#docs ul ul,
+section#docs ul ol,
+section#docs ol ul,
+section#docs ol ol {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 20px;
+    padding-left: 20px;
+}
+
+
+section#docs a {
+    text-decoration: inherit;
+    color: #0366d6;
+}
+
 
 /* Specific classes */
 
@@ -110,7 +164,9 @@ section#hero {
 }
 
 #hero img.demo {
-    width: 70%;
+    width: 100%;
+    border: solid 3px #21283e;
+    box-shadow: 5px 10px 10px 1px gray;
 }
 
 #hero .teaser {
@@ -146,12 +202,13 @@ section#hero {
 }
 
 #features>p {
-    margin: 20px 0;
+    margin: 50px 0 20px 0;
 }
 
 #features img {
     width: 60%;
     aspect-ratio: 1 / 1;
+    margin-bottom: 10px;
 
     border-style: solid;
     border-width: 2px;
@@ -165,6 +222,14 @@ section#hero {
     aspect-ratio: 16/9;
     object-fit: contain;
     border: solid gray 1px;
+}
+
+section#docs {
+    text-align: left;
+}
+
+#docs p {
+    margin-bottom: 20px;
 }
 
 
