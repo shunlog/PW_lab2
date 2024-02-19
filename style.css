@@ -1,5 +1,8 @@
-* {
+:root {
+    --max-width: 1000px;
+}
 
+* {
     scroll-behavior: smooth;
 }
 
@@ -18,9 +21,14 @@ img {
     max-width: 100%;
 }
 
+section, nav>ul {
+    padding: 0 calc(max(30px, (100% - var(--max-width))/2));
+}
+
 section {
     text-align: center;
-    padding: 30px 40px;
+    padding-bottom: 30px;
+    padding-top: 30px;
 }
 
 h2 {
@@ -38,9 +46,15 @@ nav{
 
 nav ul {
     height: 100%;
+
     display: flex;
     align-items: center;
     justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+nav ul li{
+    margin: 0 20px;
 }
 
 a.button {
@@ -136,7 +150,7 @@ section#hero {
 }
 
 #features img {
-    width: 50%;
+    width: 60%;
     aspect-ratio: 1 / 1;
 
     border-style: solid;
@@ -150,6 +164,7 @@ section#hero {
     width: 90%;
     aspect-ratio: 16/9;
     object-fit: contain;
+    border: solid gray 1px;
 }
 
 
