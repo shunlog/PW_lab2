@@ -1,7 +1,7 @@
 :root {
     --max-width: 1000px;
     --max-text-width: 700px;
-    --min-section-padding: 50px;
+    --min-section-padding: 20px;
 }
 
 * {
@@ -15,6 +15,11 @@ body {
 
 }
 
+.flex {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
 
 code {
     font-family: monospace;
@@ -182,22 +187,24 @@ section#hero {
 
 #hero .buttons {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     margin-top: 30px;
 }
 
 #hero .buttons a{
-    margin: 0 20px;
+    margin: 10px 20px;
 }
 
-.flex {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+#videos div.flex>div {
+    width: 100%;
+    max-width: 300px;
+    margin: 20px 0;
 }
 
-.flex-3 div {
-    width: 30%;
+#features div.flex>div {
+    width: 100%;
+    max-width: 300px;
     margin: 20px 0;
 }
 
@@ -222,6 +229,12 @@ section#hero {
     aspect-ratio: 16/9;
     object-fit: contain;
     border: solid gray 1px;
+}
+
+#videos iframe {
+    width: 90%;
+    aspect-ratio: 1920 / 1080;
+    max-width: 600px;
 }
 
 section#docs {
