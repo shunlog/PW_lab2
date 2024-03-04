@@ -15,6 +15,17 @@ body {
 
 }
 
+/* Phone-only elements */
+.phone-only {
+    display: none;
+    background-color: #ffff8f;
+}
+@media (max-width: 500px) {
+    .phone-only {
+        display: block;
+    }
+}
+
 .flex {
     display: flex;
     justify-content: space-around;
@@ -277,4 +288,98 @@ section#features {
 
 section#docs {
     background-color: #dde2ff;
+}
+
+#mascot {
+    position: fixed;
+    right: 0;
+    display: flex;
+
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+#mascot img {
+    width: 5em;
+}
+
+#mascot .bubble {
+    display: none;
+
+    right: 46px;
+    bottom: 40px;
+}
+
+#mascot:hover .bubble {
+    display: inline;
+}
+
+/* Animation */
+#mascot img {
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-name: bounce;
+    animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
+}
+
+@keyframes bounce {
+    0%   { transform: scale(1,1)      translateY(0); }
+    10%  { transform: scale(1.1,.9)   translateY(0); }
+    30%  { transform: scale(.9,1.1)   translateY(-100px); }
+    50%  { transform: scale(1.05,.95) translateY(0); }
+    57%  { transform: scale(1,1)      translateY(-7px); }
+    64%  { transform: scale(1,1)      translateY(0); }
+    100% { transform: scale(1,1)      translateY(0); }
+}
+
+/* Generated with https://www.ilikepixels.co.uk/bubbler/ */
+.bubble
+{
+    position: relative;
+    width: 245px;
+    height: 100px;
+    padding: 8px;
+    background: #FFFFFF;
+    -webkit-border-radius: 22px;
+    -moz-border-radius: 22px;
+    border-radius: 22px;
+    border: #7F7F7F solid 4px;
+
+    /* Align text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Comic Sans;
+
+}
+
+.bubble:after
+{
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 11px 0 11px 46px;
+    border-color: transparent #FFFFFF;
+    display: block;
+    width: 0;
+    z-index: 1;
+    margin-top: -11px;
+    right: -46px;
+    top: 73%;
+}
+
+.bubble:before
+{
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 14px 0 14px 49px;
+    border-color: transparent #7F7F7F;
+    display: block;
+    width: 0;
+    z-index: 0;
+    margin-top: -14px;
+    right: -53px;
+    top: 73%;
 }

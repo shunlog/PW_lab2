@@ -9,6 +9,16 @@
   </head>
   <body>
 
+
+    <div id="mascot" style="visibility:hidden;">
+      <div class="bubble">
+        <span>
+          I like NNN so much! You should try it out, it's just so cool!
+        </span>
+      </div>
+      <img src="img/pawn.jpg" alt="" />
+    </div>
+
     <nav>
       <ul>
         <li><a href="#features">Features</a></li>
@@ -19,6 +29,14 @@
     </nav>
 
     <main>
+
+      <section class="phone-only">
+        <h3>Desktop only</h3>
+       Looks like you're on a phone, so you probably don't need this program.
+        It's made for desktop power-users, and specifically Linux users.
+        You can still check out this cool page!
+      </section>
+
       <section id="hero">
         <div class="padded">
 
@@ -185,4 +203,12 @@
     </main>
 
   </body>
+
+  <script type="text/javascript">
+
+   setTimeout(function(){
+     document.getElementById('mascot').style.visibility = "visible";
+   }, 4000);
+
+  </script>
 </html>
