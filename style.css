@@ -304,14 +304,13 @@ section#docs {
 }
 
 #mascot .bubble {
-    display: none;
-
+    visibility: hidden;
     right: 46px;
     bottom: 40px;
 }
 
 #mascot:hover .bubble {
-    display: inline;
+    visibility: visible;
 }
 
 /* Animation */
@@ -350,8 +349,8 @@ section#docs {
     justify-content: center;
     align-items: center;
 
-    font-family: Comic Sans;
-
+    font-family: Comic neue;
+    font-weight: bold;
 }
 
 .bubble:after
