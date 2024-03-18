@@ -72,6 +72,7 @@ nav{
     height: 5em;
     padding: 0 30px;
     color: snow;
+    position: static;
 }
 
 nav ul {
