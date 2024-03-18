@@ -204,8 +204,6 @@ section#hero {
 }
 
 #videos div.flex>div {
-    width: 100%;
-    max-width: 300px;
     margin: 20px 0;
 }
 
