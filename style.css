@@ -26,11 +26,6 @@ body {
     }
 }
 
-.flex {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
 
 code {
     font-family: monospace;
@@ -215,8 +210,6 @@ section#hero {
 }
 
 #features div.flex>div {
-    width: 100%;
-    max-width: 300px;
     margin: 20px 0;
 }
 
