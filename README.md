@@ -2,6 +2,7 @@
 
 This is a landing page (a single HTML page) for the [nnn](https://github.com/jarun/nnn) file manager.
 Hosted on [GitHub Pages](https://shunlog.github.io/PW_lab2/).
+Uses the [Picnic CSS framework](https://picnicss.com).
 
 ## About nnn
 
